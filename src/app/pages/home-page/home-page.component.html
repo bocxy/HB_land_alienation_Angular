@@ -1,0 +1,109 @@
+<main class="container-fluid d-flex flex-column p-0" style="min-height: 100vh;">
+    <app-header></app-header>
+    <section class="home-section">
+        <div class="filters">
+            <mat-form-field class="searchFilter">
+                <mat-label>Search</mat-label>
+                <input type="search" matInput placeholder="" (keyup)="applyFilter($event)" #input>
+            </mat-form-field>
+
+            <!-- Division Dropdown -->
+            <mat-form-field class="filter">
+                <mat-label>Division</mat-label>
+                <mat-select [(value)]="selectedDivision" (selectionChange)="onDivisionChange(selectedDivision)">
+                  <mat-option *ngFor="let division of divisions" [value]="division">{{ division }}</mat-option>
+                </mat-select>
+              </mat-form-field>
+              
+              <!-- District Dropdown -->
+              <mat-form-field class="filter">
+                <mat-label>District</mat-label>
+                <mat-select [(value)]="selectedDistrict" (selectionChange)="onDistrictChange(selectedDistrict)">
+                  <mat-option *ngFor="let district of districts" [value]="district">{{ district }}</mat-option>
+                </mat-select>
+              </mat-form-field>
+              
+              <!-- Taluk Dropdown -->
+              <mat-form-field class="filter">
+                <mat-label>Taluk</mat-label>
+                <mat-select [(value)]="selectedTaluk" (selectionChange)="onTalukChange(selectedTaluk)">
+                  <mat-option *ngFor="let taluk of taluks" [value]="taluk">{{ taluk }}</mat-option>
+                </mat-select>
+              </mat-form-field>
+              
+            <div class="d-flex justify-content-end align-items-center">
+                <button mat-raised-button (click)="downloadAsPDF()"
+                    style="background-color: #3FB8DE; width: 7rem;">Download</button>
+                    <button mat-raised-button (click)="clearFilters()"
+                    style="background-color: #FF0000; margin-left: 1rem;">Clear Filters</button>
+
+            </div>
+        </div>
+        <table mat-table [dataSource]="allLandRecords.data" class="mat-elevation-z8 table-responsive">
+
+            <ng-container matColumnDef="sno">
+                <th mat-header-cell *matHeaderCellDef> S.No </th>
+                <td mat-cell *matCellDef="let landRecord; index as i"> {{ i + 1 }} </td>
+            </ng-container>
+
+            <ng-container matColumnDef="division">
+                <th mat-header-cell *matHeaderCellDef> Division </th>
+                <td mat-cell *matCellDef="let landRecord"> {{ landRecord.division }} </td>
+            </ng-container>
+
+            <ng-container matColumnDef="schemeName">
+                <th mat-header-cell *matHeaderCellDef> Scheme Name </th>
+                <td mat-cell *matCellDef="let landRecord"> {{ landRecord.name_of_scheme }} </td>
+            </ng-container>
+
+            <ng-container matColumnDef="landsAlienated">
+                <th mat-header-cell *matHeaderCellDef> Lands Alienated (in acres) </th>
+                <td mat-cell *matCellDef="let landRecord"> {{ landRecord.land_alienated }} </td>
+            </ng-container>
+
+            <ng-container matColumnDef="GO">
+                <th mat-header-cell *matHeaderCellDef> GO Details </th>
+                <td mat-cell *matCellDef="let landRecord"> {{ landRecord.go_details }} </td>
+            </ng-container>
+
+            <ng-container matColumnDef="district">
+                <th mat-header-cell *matHeaderCellDef> District </th>
+                <td mat-cell *matCellDef="let landRecord"> {{ landRecord.district }} </td>
+            </ng-container>
+
+            <ng-container matColumnDef="taluk">
+                <th mat-header-cell *matHeaderCellDef> Taluk </th>
+                <td mat-cell *matCellDef="let landRecord"> {{ landRecord.taluk }} </td>
+            </ng-container>
+
+            <ng-container matColumnDef="village">
+                <th mat-header-cell *matHeaderCellDef> Village </th>
+                <td mat-cell *matCellDef="let landRecord"> {{ landRecord.village }} </td>
+            </ng-container>
+
+            <ng-container matColumnDef="action">
+                <th mat-header-cell *matHeaderCellDef> Action </th>
+                <td mat-cell *matCellDef="let landRecord; let i = index;" class="action-icons">
+                    <a [routerLink]="['/edit-land-record', i+1]">
+                        <span class="material-symbols-rounded">
+                            edit
+                        </span>
+                    </a>
+                    <a [routerLink]="['/view-land-record', i+1]">
+                        <span class="material-symbols-rounded">
+                            visibility
+                        </span>
+                    </a>
+                </td>
+            </ng-container>
+
+            <tr mat-header-row *matHeaderRowDef="landRecordColumns"></tr>
+            <tr mat-row *matRowDef="let row; columns: landRecordColumns;"></tr>
+            <tr class="mat-row" *matNoDataRow>
+                <td class="mat-cell" colspan="4">No data matching the filter "{{input.value}}"</td>
+            </tr>
+        </table>
+
+    </section>
+    <app-footer class="mt-auto w-100"></app-footer>
+</main>

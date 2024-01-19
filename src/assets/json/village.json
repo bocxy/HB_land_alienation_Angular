@@ -1,0 +1,121 @@
+[
+    {
+        "id": 1,
+        "name": "Padi",
+        "division_id": 1,
+        "district_id": 1,
+        "taluk_id": 1
+    },
+    {
+        "id": 2,
+        "name": "Mogappair",
+        "division_id": 1,
+        "district_id": 1,
+        "taluk_id": 1
+    },
+    {
+        "id": 3,
+        "name": "Korattur",
+        "division_id": 1,
+        "district_id": 1,
+        "taluk_id": 1
+    },
+    {
+        "id": 4,
+        "name": "Aminjikarai",
+        "division_id": 1,
+        "district_id": 1,
+        "taluk_id": 2
+    },
+    {
+        "id": 5,
+        "name": "Arumbakkam",
+        "division_id": 1,
+        "district_id": 1,
+        "taluk_id": 2
+    },
+    {
+        "id": 6,
+        "name": "Chinnakudal",
+        "division_id": 1,
+        "district_id": 1,
+        "taluk_id": 2
+    },
+    {
+        "id": 7,
+        "name": "Koyambedu",
+        "division_id": 1,
+        "district_id": 1,
+        "taluk_id": 2
+    },
+    {
+        "id": 8,
+        "name": "Mullam",
+        "division_id": 1,
+        "district_id": 1,
+        "taluk_id": 2
+    },
+    {
+        "id": 9,
+        "name": "Naduvakkarai",
+        "division_id": 1,
+        "district_id": 1,
+        "taluk_id": 2
+    },
+    {
+        "id": 10,
+        "name": "Periyakudal",
+        "division_id": 1,
+        "district_id": 1,
+        "taluk_id": 2
+    },
+    {
+        "id": 11,
+        "name": "Thirumangalam",
+        "division_id": 1,
+        "district_id": 1,
+        "taluk_id": 2
+    },
+    {
+        "id": 12,
+        "name": "Vada agaram/ Agaram vada",
+        "division_id": 1,
+        "district_id": 1,
+        "taluk_id": 2
+    },
+    {
+        "id": 13,
+        "name": "Villivakkam",
+        "division_id": 1,
+        "district_id": 1,
+        "taluk_id": 2
+    },
+    {
+        "id": 14,
+        "name": "Ayanavaram",
+        "division_id": 1,
+        "district_id": 1,
+        "taluk_id": 3
+    },
+    {
+        "id": 15,
+        "name": "Konnur",
+        "division_id": 1,
+        "district_id": 1,
+        "taluk_id": 3
+    },
+    {
+        "id": 16,
+        "name": "Kolathur",
+        "division_id": 1,
+        "district_id": 1,
+        "taluk_id": 3
+    },
+    {
+        "id": 17,
+        "name": "Peravallur",
+        "division_id": 1,
+        "district_id": 1,
+        "taluk_id": 3
+    }
+]

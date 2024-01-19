@@ -1,0 +1,97 @@
+<main class="container-fluid d-flex flex-column p-0" style="min-height: 100vh;">
+    <app-header></app-header>
+    <section class="mb-2">
+        <h2 id="section-heading">create new land record</h2>
+        <div class="land-record">
+            <h5 style="font-weight: 500;font-size: 1rem;">Enter Land Details & Documents</h5>
+            <form class="land-details-form" #createLandRecordForm="ngForm"
+                (ngSubmit)="onCreateLandRecord(createLandRecordForm.value)" enctype="multipart/form-data">
+
+                <mat-form-field class="filter">
+                    <mat-label>Division</mat-label>
+                    <mat-select [(value)]="selectedDivision" (selectionChange)="onDivisionChange(selectedDivision)">
+                      <mat-option *ngFor="let division of divisions" [value]="division">{{ division }}</mat-option>
+                    </mat-select>
+                  </mat-form-field>
+
+                  <mat-form-field class="filter">
+                    <mat-label>District</mat-label>
+                    <mat-select [(value)]="selectedDistrict" (selectionChange)="onDistrictChange(selectedDistrict)">
+                      <mat-option *ngFor="let district of districts" [value]="district">{{ district }}</mat-option>
+                    </mat-select>
+                  </mat-form-field>
+
+                  <mat-form-field class="filter">
+                    <mat-label>Taluk</mat-label>
+                    <mat-select [(value)]="selectedTaluk" (selectionChange)="onTalukChange(selectedTaluk)">
+                      <mat-option *ngFor="let taluk of taluks" [value]="taluk">{{ taluk }}</mat-option>
+                    </mat-select>
+                  </mat-form-field>
+                  
+
+                <mat-form-field>
+                    <mat-label>Village</mat-label>
+                    <mat-select name="village" [formControl]="villageControl" [(ngModel)]="selectedVillage">
+                        <mat-option [value]="null">None</mat-option>
+                        <mat-option *ngFor="let village of villages" [value]="village">{{village}}
+                            
+                        </mat-option>
+                    </mat-select>
+                </mat-form-field>
+
+                <mat-form-field>
+                    <mat-label>Name of the Scheme</mat-label>
+                    <input type="text" matInput placeholder="" name="name_of_scheme" value="name_of_scheme" ngModel>
+                </mat-form-field>
+
+                <mat-form-field>
+                    <mat-label>Lands Alienated (in acres)</mat-label>
+                    <input type="text" matInput placeholder="" name="land_alienated" value="land_alienated" ngModel>
+                </mat-form-field>
+
+                <mat-form-field>
+                    <mat-label>Date of Enterupon permission</mat-label>
+                    <input type="date" matInput placeholder="" name="date_of_enterupon_permission"
+                        value="date_of_enterupon_permission" ngModel>
+                </mat-form-field>
+                <mat-form-field>
+                    <mat-label>S.F Number</mat-label>
+                    <input type="text" matInput placeholder="" name="sf_number" value="sf_number" ngModel>
+                </mat-form-field>
+                <mat-form-field>
+                    <mat-label>G.O Details</mat-label>
+                    <input type="text" matInput placeholder="" name="go_details" value="go_details" ngModel>
+                </mat-form-field>
+                <mat-form-field>
+                    <mat-label>Ownership of Land as per revenue records</mat-label>
+                    <input type="text" matInput placeholder="" name="ownership_land_revenue"
+                        value="ownership_land_revenue" ngModel>
+                </mat-form-field>
+                <div class="">
+                    <label for="GOFile" class="form-label">G.O File</label>
+                    <div class="input-group">
+                        <input type="file" class="form-control" id="GOFile" name="GOFile" aria-describedby="GO File"
+                            aria-label="Upload" (change)="onGOFileSelected($event)" accept=".pdf">
+                    </div>
+                </div>
+                <mat-form-field>
+                    <mat-label>Utilization of Land</mat-label>
+                    <input type="text" matInput placeholder="" name="utilization_land" value="utilization_land" ngModel>
+                </mat-form-field>
+                <div class="">
+                    <label for="otherFile" class="form-label">Other File (if any)</label>
+                    <div class="input-group">
+                        <input type="file" class="form-control" id="otherFile" name="otherFile"
+                            aria-describedby="Other File" aria-label="Upload" (change)="onOtherFileSelected($event)"
+                            accept=".pdf">
+                    </div>
+                </div>
+                <div class="d-flex justify-content-end buttons">
+                    <button mat-raised-button type="reset" color="basic" style="margin:1rem;">Reset</button>
+                    <button mat-raised-button type="submit" style="margin:1rem;background-color: #3FB8DE;">Save</button>
+                </div>
+            </form>
+        </div>
+    </section>
+    <app-footer class="mt-auto w-100"></app-footer>
+</main>

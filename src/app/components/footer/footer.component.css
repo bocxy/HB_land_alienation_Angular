@@ -1,0 +1,22 @@
+.image-container {
+    display: flex;
+    align-items: center;
+}
+
+.image-container img {
+    height: 5.25rem;
+    /* Adjust the height as needed */
+}
+
+.address-list>ul>li {
+    list-style: none;
+    font-size: medium;
+    font-weight: 500;
+    color: black;
+}
+
+.copyright {
+    font-size: medium;
+    font-weight: 500;
+    color: black;
+}

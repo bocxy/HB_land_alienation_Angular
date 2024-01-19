@@ -1,0 +1,105 @@
+<main class="container-fluid d-flex flex-column p-0" style="min-height: 100vh;">
+    <app-header></app-header>
+    <section class="mb-2">
+        <h2 id="section-heading">view land record</h2>
+        <div class="land-record">
+            <div class="d-flex justify-content-end mb-4">
+                <!-- Delete button -->
+                <button mat-raised-button color="warn" class="ms-4" (click)="onDeleteLandRecord()">Delete</button>
+            </div>
+            <table class="table table-striped">
+                <tbody>
+                    <tr>
+                        <th scope="row">1</th>
+                        <td><strong>Division</strong></td>
+                        <td>:</td>
+                        <td>{{ landRecord.division }}</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">2</th>
+                        <td><strong>District</strong></td>
+                        <td>:</td>
+                        <td>{{ landRecord.district }}</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">3</th>
+                        <td><strong>Name of the Scheme</strong></td>
+                        <td>:</td>
+                        <td>{{ landRecord.name_of_scheme }}</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">4</th>
+                        <td><strong>Taluk</strong></td>
+                        <td>:</td>
+                        <td>{{ landRecord.taluk }}</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">5</th>
+                        <td><strong>Lands Alienated (in acres)</strong></td>
+                        <td>:</td>
+                        <td>{{ landRecord.land_alienated }}</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">6</th>
+                        <td><strong>Village</strong></td>
+                        <td>:</td>
+                        <td>{{ landRecord.village }}</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">7</th>
+                        <td><strong>Date of Enter upon permission</strong></td>
+                        <td>:</td>
+                        <td>{{ landRecord.date_of_enterupon_permission | date:'dd/MM/yyyy' }}</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">8</th>
+                        <td><strong>S.F Number</strong></td>
+                        <td>:</td>
+                        <td>{{ landRecord.sf_number }}</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">9</th>
+                        <td><strong>Ownership of Land as per revenue records</strong></td>
+                        <td>:</td>
+                        <td>{{ landRecord.ownership_land_revenue }}</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">10</th>
+                        <td><strong>G.O. Details</strong></td>
+                        <td>:</td>
+                        <td>{{ landRecord.go_details }}</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">11</th>
+                        <td><strong>Utilization of Land</strong></td>
+                        <td>:</td>
+                        <td>{{ landRecord.utilization_land }}</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">12</th>
+                        <td><strong>GO File</strong></td>
+                        <td>:</td>
+                        <td><a href="#" target="_blank">
+                                <span class="material-symbols-rounded">
+                                    picture_as_pdf
+                                </span>
+                            </a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">13</th>
+                        <td><strong>Other File</strong></td>
+                        <td>:</td>
+                        <td><a href="#" target="_blank">
+                                <span class="material-symbols-rounded">
+                                    picture_as_pdf
+                                </span>
+                            </a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+    <app-footer class="mt-auto w-100"></app-footer>
+</main>

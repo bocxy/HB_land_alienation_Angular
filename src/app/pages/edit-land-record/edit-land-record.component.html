@@ -1,0 +1,100 @@
+<main class="container-fluid d-flex flex-column p-0" style="min-height: 100vh;">
+    <app-header></app-header>
+    <section class="mb-2">
+        <h2 id="section-heading">edit land record</h2>
+        <div class="land-record">
+            <form class="land-details-form" (ngSubmit)="onUpdateLandRecord()" enctype="multipart/form-data">
+                <!-- Division details -->
+                <mat-form-field>
+                    <mat-label>Division</mat-label>
+                    <input type="text" matInput placeholder="" [value]="landRecord.division">
+                </mat-form-field>
+
+                <!-- District details -->
+                <mat-form-field>
+                    <mat-label>District</mat-label>
+                    <input type="text" matInput placeholder="" [value]="landRecord.district">
+                </mat-form-field>
+
+                <!-- Name of the Scheme details -->
+                <mat-form-field>
+                    <mat-label>Name of the Scheme</mat-label>
+                    <input type="text" matInput placeholder="" [value]="landRecord.name_of_scheme">
+                </mat-form-field>
+
+                <!-- Taluk details -->
+                <mat-form-field>
+                    <mat-label>Taluk</mat-label>
+                    <input type="text" matInput placeholder="" [value]="landRecord.taluk">
+                </mat-form-field>
+
+                <!-- Lands Alienated (in acres) details -->
+                <mat-form-field>
+                    <mat-label>Lands Alienated (in acres)</mat-label>
+                    <input type="text" matInput placeholder="" [value]="landRecord.land_alienated">
+                </mat-form-field>
+
+                <!-- Village details -->
+                <mat-form-field>
+                    <mat-label>Village</mat-label>
+                    <input type="text" matInput placeholder="" [value]="landRecord.village">
+                </mat-form-field>
+
+                <!-- Date of Enter upon permission details -->
+                <mat-form-field>
+                    <mat-label>Date of Enter upon permission</mat-label>
+                    <input type="date" matInput placeholder=""
+                        [value]="landRecord.date_of_enterupon_permission | date:'dd/MM/yyyy'">
+                </mat-form-field>
+
+                <!-- S.F Number details -->
+                <mat-form-field>
+                    <mat-label>S.F Number</mat-label>
+                    <input type="text" matInput placeholder="" [value]="landRecord.sf_number">
+                </mat-form-field>
+
+                <!-- Ownership of Land as per revenue records details -->
+                <mat-form-field>
+                    <mat-label>Ownership of Land as per revenue records</mat-label>
+                    <input type="text" matInput placeholder="" [value]="landRecord.ownership_land_revenue">
+                </mat-form-field>
+
+                <!-- G.O. Details -->
+                <mat-form-field>
+                    <mat-label>G.O. Details</mat-label>
+                    <input type="text" matInput placeholder="" [value]="landRecord.go_details">
+                </mat-form-field>
+
+                <div class="">
+                    <label for="GOFile" class="form-label">G.O File</label>
+                    <div class="input-group">
+                        <input type="file" class="form-control" id="GOFile" name="GOFile" aria-describedby="GO File"
+                            aria-label="Upload" (change)="onGOFileSelected($event)" accept=".pdf">
+                    </div>
+                </div>
+
+                <!-- Utilization of Land details -->
+                <mat-form-field>
+                    <mat-label>Utilization of Land</mat-label>
+                    <input type="text" matInput placeholder="" [value]="landRecord.utilization_land">
+                </mat-form-field>
+
+                <div class="">
+                    <label for="otherFile" class="form-label">Other File (if any)</label>
+                    <div class="input-group">
+                        <input type="file" class="form-control" id="otherFile" name="otherFile"
+                            aria-describedby="Other File" aria-label="Upload" (change)="onOtherFileSelected($event)"
+                            accept=".pdf">
+                    </div>
+                </div>
+
+                <div class="d-flex justify-content-end buttons">
+                    <button mat-raised-button type="reset" color="basic" style="margin:1rem;">Reset</button>
+                    <button mat-raised-button type="submit"
+                        style="margin:1rem;background-color: #3FB8DE;">Update</button>
+                </div>
+            </form>
+        </div>
+    </section>
+    <app-footer class="mt-auto w-100"></app-footer>
+</main>

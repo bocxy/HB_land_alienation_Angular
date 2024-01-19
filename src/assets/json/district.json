@@ -1,0 +1,114 @@
+[
+    {
+        "id": 1,
+        "name": "Chennai",
+        "division_id": 1,
+        "division_name": "Anna Nagar",
+        "type": null
+    },
+    {
+        "id": 2,
+        "name": "Thiruvallur",
+        "division_id": 1,
+        "division_name": "Anna Nagar",
+        "type": null
+    },
+    {
+        "id": 3,
+        "name": "Chennai",
+        "division_id": 2,
+        "division_name": "JJ Nagar",
+        "type": null
+    },
+    {
+        "id": 4,
+        "name": "Thiruvallur",
+        "division_id": 2,
+        "division_name": "JJ Nagar",
+        "type": null
+    },
+    {
+        "id": 5,
+        "name": "Chennai",
+        "division_id": 3,
+        "division_name": "Special Project Division - 1",
+        "type": null
+    },
+    {
+        "id": 6,
+        "name": "Thiruvallur",
+        "division_id": 3,
+        "division_name": "Special Project Division - 1",
+        "type": null
+    },
+    {
+        "id": 7,
+        "name": "Chennai",
+        "division_id": 4,
+        "division_name": "Besant Nagar",
+        "type": null
+    },
+    {
+        "id": 8,
+        "name": "Chennai",
+        "division_id": 5,
+        "division_name": "KK Nagar",
+        "type": null
+    },
+    {
+        "id": 9,
+        "name": "Thiruvallur",
+        "division_id": 5,
+        "division_name": "KK Nagar",
+        "type": null
+    },
+    {
+        "id": 10,
+        "name": "Chengalpet",
+        "division_id": 5,
+        "division_name": "KK Nagar",
+        "type": null
+    },
+    {
+        "id": 11,
+        "name": "William",
+        "division_id": 6,
+        "division_name": "Thirumazhisai Satellite Town",
+        "type": null
+    },
+    {
+        "id": 12,
+        "name": "Thiruvallur",
+        "division_id": 7,
+        "division_name": "Nandanam",
+        "type": null
+    },
+    {
+        "id": 13,
+        "name": "Chennai",
+        "division_id": 8,
+        "division_name": "CIT Nagar",
+        "type": null
+    },
+    {
+        "id": 14,
+        "name": "Chennai",
+        "division_id": 9,
+        "division_name": "SAF Games Village",
+        "type": null
+    },
+    {
+        "id": 15,
+        "name": "Chennai",
+        "division_id": 10,
+        "division_name": "Foreshore Estate",
+        "type": null
+    },
+    {
+        "id": 16,
+        "name": "Thiruvallur",
+        "division_id": 10,
+        "division_name": "Foreshore Estate",
+        "type": null
+    }
+]

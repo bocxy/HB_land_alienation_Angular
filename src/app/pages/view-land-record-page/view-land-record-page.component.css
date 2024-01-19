@@ -1,0 +1,18 @@
+#section-heading {
+    text-transform: uppercase;
+    font-size: 2rem;
+    text-align: center;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.land-record {
+    margin-left: 5rem;
+    margin-right: 5rem;
+}
+
+.land-details-form {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem 4rem;
+}

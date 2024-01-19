@@ -1,0 +1,56 @@
+[
+    {
+        "id": 1,
+        "name": "Ambattur",
+        "division_id": 1,
+        "district_id": 1
+    },
+    {
+        "id": 2,
+        "name": "Aminjikarai",
+        "division_id": 1,
+        "district_id": 1
+    },
+    {
+        "id": 3,
+        "name": "Ayanavaram",
+        "division_id": 1,
+        "district_id": 1
+    },
+    {
+        "id": 4,
+        "name": "Egmore",
+        "division_id": 1,
+        "district_id": 1
+    },
+    {
+        "id": 5,
+        "name": "Madavaram",
+        "division_id": 1,
+        "district_id": 1
+    },
+    {
+        "id": 6,
+        "name": "Perambur",
+        "division_id": 1,
+        "district_id": 1
+    },
+    {
+        "id": 7,
+        "name": "Purasaiwakkam",
+        "division_id": 1,
+        "district_id": 1
+    },
+    {
+        "id": 8,
+        "name": "Tondiyarpet",
+        "division_id": 1,
+        "district_id": 1
+    },
+    {
+        "id": 9,
+        "name": "Thiruvotriyur",
+        "division_id": 1,
+        "district_id": 1
+    }
+]
